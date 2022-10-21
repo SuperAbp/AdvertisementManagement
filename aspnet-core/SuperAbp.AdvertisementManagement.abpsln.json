@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SuperAbp.AdvertisementManagement": {
+      "path": "SuperAbp.AdvertisementManagement.abpmdl.json"
+    }
+  }
+}

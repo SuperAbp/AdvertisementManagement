@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "SuperAbp.AdvertisementManagement.Domain.Shared": {
+      "path": "src/SuperAbp.AdvertisementManagement.Domain.Shared/SuperAbp.AdvertisementManagement.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.Domain": {
+      "path": "src/SuperAbp.AdvertisementManagement.Domain/SuperAbp.AdvertisementManagement.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.Application.Contracts": {
+      "path": "src/SuperAbp.AdvertisementManagement.Application.Contracts/SuperAbp.AdvertisementManagement.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.Application": {
+      "path": "src/SuperAbp.AdvertisementManagement.Application/SuperAbp.AdvertisementManagement.Application.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.EntityFrameworkCore": {
+      "path": "src/SuperAbp.AdvertisementManagement.EntityFrameworkCore/SuperAbp.AdvertisementManagement.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.MongoDB": {
+      "path": "src/SuperAbp.AdvertisementManagement.MongoDB/SuperAbp.AdvertisementManagement.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.HttpApi": {
+      "path": "src/SuperAbp.AdvertisementManagement.HttpApi/SuperAbp.AdvertisementManagement.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.HttpApi.Client": {
+      "path": "src/SuperAbp.AdvertisementManagement.HttpApi.Client/SuperAbp.AdvertisementManagement.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.TestBase": {
+      "path": "test/SuperAbp.AdvertisementManagement.TestBase/SuperAbp.AdvertisementManagement.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AdvertisementManagement.EntityFrameworkCore.Tests": {
+      "path": "test/SuperAbp.AdvertisementManagement.EntityFrameworkCore.Tests/SuperAbp.AdvertisementManagement.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AdvertisementManagement.MongoDB.Tests": {
+      "path": "test/SuperAbp.AdvertisementManagement.MongoDB.Tests/SuperAbp.AdvertisementManagement.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AdvertisementManagement.Domain.Tests": {
+      "path": "test/SuperAbp.AdvertisementManagement.Domain.Tests/SuperAbp.AdvertisementManagement.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AdvertisementManagement.Application.Tests": {
+      "path": "test/SuperAbp.AdvertisementManagement.Application.Tests/SuperAbp.AdvertisementManagement.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AdvertisementManagement.HttpApi.Host": {
+      "path": "host/SuperAbp.AdvertisementManagement.HttpApi.Host/SuperAbp.AdvertisementManagement.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AdvertisementManagement.Web": {
+      "path": "src/SuperAbp.AdvertisementManagement.Web/SuperAbp.AdvertisementManagement.Web.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/SuperAbp.AdvertisementManagement.HttpApi.Client.ConsoleTestApp/SuperAbp.AdvertisementManagement.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "SuperAbp.AdvertisementManagement.Web.Host": {
+      "path": "host/SuperAbp.AdvertisementManagement.Web.Host/SuperAbp.AdvertisementManagement.Web.Host.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AdvertisementManagement.AuthServer": {
+      "path": "host/SuperAbp.AdvertisementManagement.AuthServer/SuperAbp.AdvertisementManagement.AuthServer.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AdvertisementManagement.Host.Shared": {
+      "path": "host/SuperAbp.AdvertisementManagement.Host.Shared/SuperAbp.AdvertisementManagement.Host.Shared.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AdvertisementManagement.Web.Unified": {
+      "path": "host/SuperAbp.AdvertisementManagement.Web.Unified/SuperAbp.AdvertisementManagement.Web.Unified.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AdvertisementManagement.Blazor": {
+      "path": "src/SuperAbp.AdvertisementManagement.Blazor/SuperAbp.AdvertisementManagement.Blazor.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.Blazor.Host": {
+      "path": "host/SuperAbp.AdvertisementManagement.Blazor.Host/SuperAbp.AdvertisementManagement.Blazor.Host.abppkg.json",
+      "folder": "host"
+    },
+    "SuperAbp.AdvertisementManagement.Blazor.Server": {
+      "path": "src/SuperAbp.AdvertisementManagement.Blazor.Server/SuperAbp.AdvertisementManagement.Blazor.Server.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.Blazor.WebAssembly": {
+      "path": "src/SuperAbp.AdvertisementManagement.Blazor.WebAssembly/SuperAbp.AdvertisementManagement.Blazor.WebAssembly.abppkg.json",
+      "folder": "src"
+    },
+    "SuperAbp.AdvertisementManagement.Blazor.Server.Host": {
+      "path": "host/SuperAbp.AdvertisementManagement.Blazor.Server.Host/SuperAbp.AdvertisementManagement.Blazor.Server.Host.abppkg.json",
+      "folder": "host"
+    }
+  }
+}
