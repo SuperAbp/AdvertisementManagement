@@ -42,6 +42,10 @@ namespace SuperAbp.AdvertisementManagement.AdvertisementPositions
 
             var queryable = await _advertisementPositionRepository.GetQueryableAsync();
 
+            queryable = queryable
+                .WhereIf(!input.Name.IsNullOrWhiteSpace(), p => p.Name.Contains(input.Name))
+                .WhereIf(input.Enable.HasValue, p => p.Enable == input.Enable.Value);
+
             long totalCount = await AsyncExecuter.CountAsync(queryable);
 
             var entities = await AsyncExecuter.ToListAsync(queryable

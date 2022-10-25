@@ -42,7 +42,7 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         {
             var queryable = from a in await _advertisementRepository.GetQueryableAsync()
                             join p in await _advertisementPositionRepository.GetQueryableAsync() on a.AdvertisementPositionId equals p.Id
-                            where p.Code == advertisementPositionCode
+                            where a.Enable && p.Enable && p.Code == advertisementPositionCode
                             select a;
 
             long totalCount = await AsyncExecuter.CountAsync(queryable);

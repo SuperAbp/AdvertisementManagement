@@ -46,7 +46,9 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
             var advertisementQueryable = await _advertisementRepository.GetQueryableAsync();
             advertisementQueryable = advertisementQueryable
                 .WhereIf(input.AdvertisementPositionId.HasValue,
-                    a => a.AdvertisementPositionId == input.AdvertisementPositionId.Value);
+                    a => a.AdvertisementPositionId == input.AdvertisementPositionId.Value)
+                .WhereIf(input.Enable.HasValue,
+                    a => a.Enable == input.Enable.Value);
             var queryable = (from a in advertisementQueryable
                              join p in await _advertisementPositionRepository.GetQueryableAsync() on a.AdvertisementPositionId equals p.Id
                              select new AdvertisementWithPosition
@@ -90,11 +92,10 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         /// <param name="input"></param>
         /// <returns></returns>
         [Authorize(AdvertisementManagementPermissions.Advertisements.Create)]
-        public virtual async Task<AdvertisementListDto> CreateAsync(AdvertisementCreateDto input)
+        public virtual async Task CreateAsync(AdvertisementCreateDto input)
         {
             var entity = ObjectMapper.Map<AdvertisementCreateDto, Advertisement>(input);
-            entity = await _advertisementRepository.InsertAsync(entity, true);
-            return ObjectMapper.Map<Advertisement, AdvertisementListDto>(entity);
+            entity = await _advertisementRepository.InsertAsync(entity);
         }
 
         /// <summary>
@@ -104,12 +105,11 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         /// <param name="input"></param>
         /// <returns></returns>
         [Authorize(AdvertisementManagementPermissions.Advertisements.Update)]
-        public virtual async Task<AdvertisementListDto> UpdateAsync(Guid id, AdvertisementUpdateDto input)
+        public virtual async Task UpdateAsync(Guid id, AdvertisementUpdateDto input)
         {
             Advertisement entity = await _advertisementRepository.GetAsync(id);
             entity = ObjectMapper.Map(input, entity);
             entity = await _advertisementRepository.UpdateAsync(entity);
-            return ObjectMapper.Map<Advertisement, AdvertisementListDto>(entity);
         }
 
         /// <summary>

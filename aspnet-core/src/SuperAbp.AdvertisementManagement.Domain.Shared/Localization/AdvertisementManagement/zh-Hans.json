@@ -2,6 +2,31 @@
   "culture": "zh-Hans",
   "texts": {
     "MyAccount": "我的账户",
-    "SamplePageMessage": "AdvertisementManagement模块的示例页面"
+    "Search": "搜索",
+    "Reset": "重置",
+    "NewPosition": "新位置",
+    "NewAdvertisement": "新广告",
+    "SuccessDeleted": "删除成功",
+    "Edit": "编辑",
+    "Placeholder": "请输入{0}",
+    "ChoosePlaceholder": "请选择{0}",
+    "IsEnable": "是否启用",
+    "Position": "位置",
+    "Picture": "图片",
+    "Annex": "附件",
+    "Name": "名称",
+    "Link": "链接",
+    "Sort": "排序",
+    "Code": "代码",
+    "Enable": "启用",
+    "Disable": "禁用",
+    "Description": "描述",
+    "Permission:AdvertisementManagement": "广告管理",
+    "Permission:Advertisements": "广告",
+    "Permission:AdvertisementPositions": "广告位置",
+    "Permission:Management": "管理",
+    "Permission:Create": "创建",
+    "Permission:Edit": "修改",
+    "Permission:Delete": "删除"
   }
 }

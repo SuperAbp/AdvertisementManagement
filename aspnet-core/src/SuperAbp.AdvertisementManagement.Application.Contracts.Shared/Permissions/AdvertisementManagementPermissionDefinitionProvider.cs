@@ -11,6 +11,7 @@ public class AdvertisementManagementPermissionDefinitionProvider : PermissionDef
         var myGroup = context.AddGroup(AdvertisementManagementPermissions.GroupName, L("Permission:AdvertisementManagement"));
 
         var advertisements = myGroup.AddPermission(AdvertisementManagementPermissions.Advertisements.Default, L("Permission:Advertisements"));
+        advertisements.AddChild(AdvertisementManagementPermissions.Advertisements.Management, L("Permission:Management"));
         advertisements.AddChild(AdvertisementManagementPermissions.Advertisements.Create, L("Permission:Create"));
         advertisements.AddChild(AdvertisementManagementPermissions.Advertisements.Update, L("Permission:Edit"));
         advertisements.AddChild(AdvertisementManagementPermissions.Advertisements.Delete, L("Permission:Delete"));

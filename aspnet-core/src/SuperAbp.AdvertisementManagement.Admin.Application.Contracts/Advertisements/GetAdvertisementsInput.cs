@@ -8,6 +8,14 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
     /// </summary>
     public class GetAdvertisementsInput : PagedAndSortedResultRequestDto
     {
+        /// <summary>
+        /// 位置Id
+        /// </summary>
         public Guid? AdvertisementPositionId { get; set; }
+
+        /// <summary>
+        /// 启用
+        /// </summary>
+        public bool? Enable { get; set; }
     }
 }

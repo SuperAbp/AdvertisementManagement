@@ -54,9 +54,9 @@ namespace SuperAbp.AdvertisementManagement.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<AdvertisementListDto> CreateAsync(AdvertisementCreateDto input)
+        public async Task CreateAsync(AdvertisementCreateDto input)
         {
-            return await _advertisementAppService.CreateAsync(input);
+            await _advertisementAppService.CreateAsync(input);
         }
 
         /// <summary>
@@ -66,9 +66,9 @@ namespace SuperAbp.AdvertisementManagement.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<AdvertisementListDto> UpdateAsync(Guid id, AdvertisementUpdateDto input)
+        public async Task UpdateAsync(Guid id, AdvertisementUpdateDto input)
         {
-            return await _advertisementAppService.UpdateAsync(id, input);
+            await _advertisementAppService.UpdateAsync(id, input);
         }
 
         /// <summary>

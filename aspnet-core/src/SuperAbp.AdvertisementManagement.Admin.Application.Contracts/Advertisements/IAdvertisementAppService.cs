@@ -29,7 +29,7 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<AdvertisementListDto> CreateAsync(AdvertisementCreateDto input);
+        Task CreateAsync(AdvertisementCreateDto input);
 
         /// <summary>
         /// 更新
@@ -37,7 +37,7 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         /// <param name="id">主键</param>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<AdvertisementListDto> UpdateAsync(Guid id, AdvertisementUpdateDto input);
+        Task UpdateAsync(Guid id, AdvertisementUpdateDto input);
 
         /// <summary>
         /// 删除
