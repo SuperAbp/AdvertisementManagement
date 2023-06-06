@@ -26,8 +26,10 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         /// .ctor
         /// </summary>
         /// <param name="advertisementRepository"></param>
+        /// <param name="advertisementPositionRepository"></param>
         public AdvertisementAppService(
-            IAdvertisementRepository advertisementRepository, IAdvertisementPositionRepository advertisementPositionRepository)
+            IAdvertisementRepository advertisementRepository,
+            IAdvertisementPositionRepository advertisementPositionRepository)
         {
             _advertisementRepository = advertisementRepository;
             _advertisementPositionRepository = advertisementPositionRepository;
@@ -45,14 +47,12 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
                             where a.Enable && p.Enable && p.Code == advertisementPositionCode
                             select a;
 
-            long totalCount = await AsyncExecuter.CountAsync(queryable);
-
             var entities = await AsyncExecuter.ToListAsync(queryable
                 .OrderBy(AdvertisementConsts.DefaultSorting));
 
             var dtos = ObjectMapper.Map<List<Advertisement>, List<AdvertisementListDto>>(entities);
 
-            return new PagedResultDto<AdvertisementListDto>(totalCount, dtos);
+            return new ListResultDto<AdvertisementListDto>(dtos);
         }
     }
 }

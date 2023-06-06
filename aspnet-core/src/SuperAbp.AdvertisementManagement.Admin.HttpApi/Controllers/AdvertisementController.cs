@@ -54,9 +54,9 @@ namespace SuperAbp.AdvertisementManagement.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task CreateAsync(AdvertisementCreateDto input)
+        public async Task<Guid> CreateAsync(AdvertisementCreateDto input)
         {
-            await _advertisementAppService.CreateAsync(input);
+            return await _advertisementAppService.CreateAsync(input);
         }
 
         /// <summary>

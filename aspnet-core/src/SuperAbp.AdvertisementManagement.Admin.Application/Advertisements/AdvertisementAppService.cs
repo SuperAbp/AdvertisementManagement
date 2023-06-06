@@ -27,8 +27,10 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         /// .ctor
         /// </summary>
         /// <param name="advertisementRepository"></param>
+        /// <param name="advertisementPositionRepository"></param>
         public AdvertisementAppService(
-            IAdvertisementRepository advertisementRepository, IAdvertisementPositionRepository advertisementPositionRepository)
+            IAdvertisementRepository advertisementRepository,
+            IAdvertisementPositionRepository advertisementPositionRepository)
         {
             _advertisementRepository = advertisementRepository;
             _advertisementPositionRepository = advertisementPositionRepository;
@@ -92,10 +94,11 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         /// <param name="input"></param>
         /// <returns></returns>
         [Authorize(AdvertisementManagementPermissions.Advertisements.Create)]
-        public virtual async Task CreateAsync(AdvertisementCreateDto input)
+        public virtual async Task<Guid> CreateAsync(AdvertisementCreateDto input)
         {
             var entity = ObjectMapper.Map<AdvertisementCreateDto, Advertisement>(input);
             entity = await _advertisementRepository.InsertAsync(entity);
+            return entity.Id;
         }
 
         /// <summary>

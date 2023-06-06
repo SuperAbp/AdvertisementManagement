@@ -10,7 +10,7 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
     {
         public string Name { get; set; }
         public string Link { get; set; }
-        public System.Guid MediaId { get; set; }
+        public Guid MediaId { get; set; }
         public int Sort { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace SuperAbp.AdvertisementManagement.Advertisements
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateAsync(AdvertisementCreateDto input);
+        Task<Guid> CreateAsync(AdvertisementCreateDto input);
 
         /// <summary>
         /// 更新

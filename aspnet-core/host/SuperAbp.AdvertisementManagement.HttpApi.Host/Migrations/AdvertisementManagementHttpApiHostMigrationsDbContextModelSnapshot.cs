@@ -22,7 +22,7 @@ namespace SuperAbp.AdvertisementManagement.Migrations
                 .HasAnnotation("ProductVersion", "6.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Lzez.Shop.AdvertisementManagement.AdvertisementPositions.AdvertisementPosition", b =>
                 {
